@@ -3,14 +3,7 @@ html {
 }
 
 /* CONFIGURAÇÕES GERAIS */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    color: #333;
-    line-height: 1.6;
-    background-color: #fff;
-    border-top: 65px solid #ffd700; 
-}
+
 
 /* CABEÇALHO, header (Onde fica o menu e a logo) */
 header {
