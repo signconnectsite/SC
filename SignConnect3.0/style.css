@@ -6,21 +6,7 @@ html {
 
 
 /* CABEÇALHO, header (Onde fica o menu e a logo) */
-header {
-    background: #0056b3;
-    color: white;
-    padding: 5px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-    box-sizing: border-box;
-    border-bottom: 8px solid #ffd700; 
-}
+
 
 /* Classe que o JavaScript usa para esconder o header/menu no scroll */
 .header-hidden {
