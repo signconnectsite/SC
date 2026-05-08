@@ -1,0 +1,566 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+    border-top: 65px solid #ffd700; 
+}
+
+/* CABEÇALHO, header (Onde fica o menu e a logo) */
+header {
+    background: #0056b3;
+    color: white;
+    padding: 5px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    border-bottom: 8px solid #ffd700; 
+}
+
+/* Classe que o JavaScript usa para esconder o header/menu no scroll */
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+header .logo a {
+    display: block;
+    text-decoration: none;
+}
+
+header .logo img {
+    height: 4vw;
+    min-height: 45px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease; 
+}
+
+/* Efeito de zoom na logo quando passa o mouse, hover */
+header .logo img:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1.1vw;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #ffd700;
+}
+
+/* HERO, Imagem de destaque inicial */
+.hero {
+    /* Gradiente escuro em cima da imagem pra dar contraste */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('midia/ensino_todos.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-bottom: 8px solid #d2e1f2; 
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsividade fluida no título */
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsividade fluida no texto */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* CONTAINERS E ESPAÇAMENTOS */
+.container {
+    padding: 20px 10%;
+    text-align: center;
+    max-width: 1400px; /* Limite para telas muito grandes */
+    margin: 0 auto;
+}
+
+/* Blocos com fundo cinza para separar os temas */
+.container-backgray-causas {
+    background-color: #dfdfdf;
+    width: 100%;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.container-backgray-causas p {
+    margin-top: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.container-backgray-causas h3 {
+    padding-top: 30px;
+    color: #0056b3;
+}
+
+.container-backgray-garantias {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #dfdfdf;
+    box-sizing: border-box;
+}
+
+.intro h2 {
+    color: #0056b3;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+/* CARDS/BOX/CAIXAS */
+.grid-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #0056b3;
+    color: white;
+    padding: 30px;
+    border-radius: 35px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card b {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* ESTATÍSTICAS E GRÁFICOS */
+.data-box {
+    display: flex;
+    background: #dfdfdf;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex-wrap: wrap; 
+}
+
+.data-text, .data-chart {
+    flex: 1;
+    min-width: 300px;
+    padding: 50px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.bg-dados {
+    background-color: rgb(205, 133, 63, 0.3);
+    padding: 60px 10%;
+    border-radius: 10px;
+}
+
+.bar {
+    height: 25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    max-width: 100%; 
+}
+
+/* CAPACITAÇÃO E LEIS */
+.titulo-sessao {
+    text-align: left;
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 30px; 
+    text-transform: uppercase;
+    font-weight: 800;
+    display: block;
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1.2;
+    min-width: 300px;
+}
+
+.image-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: #555;
+}
+
+/* Criando o marcador de bolinha preta para listas */
+.text-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-size: 1.8rem;
+    line-height: 1.3rem;
+}
+
+.text-content h4 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    color: #333;
+}
+
+.small-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.laws li {
+    font-weight: 500;
+}
+
+/* FORMULÁRIO DE CONTATO */
+.contact-section {
+    background: #0056b3;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background: #e3f2fd;
+    padding: 40px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Estilo do placeholder pra não ficar apagado */
+::placeholder{
+    color:#1d1d1d;
+}
+
+/* Efeito quando passa o mouse nos campos do form */
+input[type="text"]:hover, 
+textarea:hover {
+  border-color: #000000;
+  background-color: #c8c8c8; 
+}
+
+.form-container h3 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Botão principal animado quando passa o mouse, hover */
+button {
+    width: 100%;
+    background: #ffd700;
+    border: none;
+    padding: 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* RODAPÉ */
+footer {
+    padding: 30px 10%;
+    background: #003d7a;
+    color: white;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo img {
+    height: 70px;
+    width: auto;
+}
+
+.text-blue {
+    color: #0056b3;
+}
+
+/* SELETOR DE IDIOMAS */
+.lang-switcher {
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+
+.lang-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 5px 12px;
+    font-size: 0.9vw;
+    min-font-size: 12px; 
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: auto;
+}
+
+.lang-btn:hover {
+    border-color: #ffd700;
+    color: #ffffff;
+}
+
+.lang-options {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1100;
+    overflow: hidden;
+    border-top: 5px solid transparent; 
+
+    /* Estado inicial animação caindo (Escondido e acima da posição) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+/* Links dentro do listview de idioma */
+.lang-options a {
+    color: #333 !important; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px !important;
+    margin-left: 0 !important; 
+    transition: 0.2s;
+    background-color: white;
+}
+
+.lang-options a:hover {
+    background-color: #f1f1f1;
+    color: #0056b3 !important;
+}
+
+.lang-switcher:hover .lang-options {
+    opacity: 1;
+    visibility: visible;
+
+    /* Volta para a posição original da animação*/
+    transform: translateY(0); 
+}
+
+.lang-options a.active {
+    font-weight: bold;
+    color: #0056b3 !important;
+    border-left: 4px solid #ffd700;
+}
+
+/* CONFIGURAÇÃO VLIBRAS */
+.enabled.active {
+    top: 15% !important;
+}
+
+/* RESPONSIVIDADE para telas menores */
+@media (max-width: 1024px) {
+    header nav a {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-cards {
+        grid-template-columns: 1fr; 
+    }
+
+    .data-box {
+        flex-direction: column;
+    }
+
+    .flex-row {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    header nav {
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    header nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .container {
+        padding: 20px 5%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+    }
+
+    .lang-btn {
+        font-size: 14px; 
+        padding: 8px 20px; 
+        width: auto;
+    }
+
+    .lang-options {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        min-width: 160px;
+    }
+
+    .lang-switcher:hover .lang-options {
+        transform: translateX(-50%) translateY(5px);
+    }
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 13px;
+    }
+    
+    .lang-btn {
+        font-size: 13px;
+    }
+}

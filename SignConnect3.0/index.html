@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>SignConnect - Inclusão no Ensino Superior</title>
+    <link rel="icon" type="image/svg" href="midia/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#inicio">
+                <img src="midia/logo.png" alt="Logo SignConnect">
+            </a>
+        </div>
+       <nav>
+            <a href="#inicio">Início</a>
+            <a href="#leis">Leis</a>
+            <a href="#estatisticas">Estatísticas</a>
+            <a href="#capacitacao">Capacitação</a>
+            <a href="#apoio">Apoio</a>
+            
+            <div class="lang-switcher">
+                <button class="lang-btn" aria-haspopup="true">Português-BR ▾</button>
+                    <div class="lang-options">
+                        <a href="index.html" class="active">Português-BR</a>
+                        <a href="ingles.html">English-US</a>
+                        <a href="espanhol.html">Español-ES</a>
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Ensino superior para todos?</h1>
+            <p>Estudantes surdos ainda enfrentam barreiras invisíveis dentro das universidades.</p>
+        </div>
+    </section>
+
+    <main>
+        <section id="leis" class="container intro">
+            <h2>A inclusão no ensino superior ainda não é uma realidade para todos.</h2>
+            <p class="subtitle">A falta de acessibilidade limita o aprendizado e as oportunidades de milhares de alunos surdos.</p>
+        </section>
+    
+        <section class="container-backgray-causas">
+            <div class="container"> 
+                <p class="text-blue">
+                    A taxa de evasão de alunos surdos no ensino superior brasileiro é considerada alta...
+                </p>    
+                
+                <h3>Principais questões e causas da evasão:</h3>
+                
+                <div class="grid-cards">
+                    <div class="card"><b>MENOS DE 1%:</b><br> A presença de alunos com deficiência ainda é mínima.</div>
+                    <div class="card"><b>ISOLAMENTO REAL:</b><br> Muitos alunos não se sentem parte da universidade.</div>
+                    <div class="card"><b>SEM ACESSO, SEM APRENDIZADO:</b><br> Falta de intérpretes de Libras impede a compreensão.</div>
+                    <div class="card"><b>BARREIRA INVISÍVEL:</b><br> A língua portuguesa ainda é um grande obstáculo.</div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="estatisticas" class="container">
+            <h2>Os números mostram o problema</h2>
+            <div class="data-box">
+                <div class="data-text">
+                    <h3>DADOS DA PESQUISA</h3>
+                    <p>Texto explicando nossa pesquisa e a importância dos dados coletados para a inclusão acadêmica.</p>
+                </div>
+                <div class="data-chart">
+                    <div class="bg-dados">
+                        <div class="bar" style="width: 60%; background: #D8BFD8;"></div>
+                        <div class="bar" style="width: 80%; background: #CD853F;"></div>
+                        <div class="bar" style="width: 40%; background: #D8BFD8;"></div>
+                        <div class="bar" style="width: 95%; background: #CD853F;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="capacitacao" class="container-backgray-garantias"> 
+            <h3 class="titulo-sessao">COMO AS UNIVERSIDADES PODEM GARANTIR ACESSIBILIDADE PARA SURDOS</h3>
+    
+            <div class="flex-row">
+                <div class="text-content">
+                    <ul>
+                        <li>Garantir intérpretes de Libras qualificados</li>
+                        <li>Capacitar professores para práticas inclusivas</li>
+                        <li>Utilizar tecnologias assistivas no ensino</li>
+                        <li>Produzir materiais acessíveis e adaptados</li>
+                        <li>Promover a inclusão dentro e fora da sala de aula</li>
+                        <li>Suporte Institucional</li>
+                    </ul>
+                    
+                    <h4>O que é direito do aluno?</h4>
+                    <p class="small-title">PRINCIPAIS LEIS:</p>
+                    <ul class="laws">
+                        <li>Lei de Libras (Lei nº 10.436/2002)</li>
+                        <li>Decreto nº 5.626/2005</li>
+                        <li>Lei Brasileira de Inclusão (Lei nº 13.146/2015)</li>
+                    </ul>
+                </div>
+    
+                <div class="image-container">
+                    <img src="midia/acessiblidade_surdos.png" alt="Estudantes estudando">
+                </div>
+            </div>
+        </section>
+    
+        <section id="apoio" class="contact-section">
+            <div class="form-container">
+                <h3>Entre em contato conosco</h3>
+                <form>
+                    <input type="text" placeholder="Nome" required>
+                    <input type="text" placeholder="Contato" required>
+                    <input type="text" placeholder="Assunto">
+                    <textarea placeholder="Digite sua mensagem aqui"></textarea>
+                    <button type="submit">Faça parte dessa mudança</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text">
+                <p>Trabalho acadêmico desenvolvido por estudantes de Ciência da Computação (UNIP)<br>
+                Tema: Inclusão de alunos surdos no ensino superior</p>
+            </div>
+            <div class="footer-logo">
+                <img src="midia/logo.png" alt="Logo SignConnect">
+            </div>
+        </div>
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
