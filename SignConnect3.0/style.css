@@ -460,6 +460,11 @@ footer {
     top: 15% !important;
 }
 
+[vw-acces-button] img {
+    width: auto !important;
+    height: auto !important;
+}
+
 /* RESPONSIVIDADE para telas menores */
 @media (max-width: 1024px) {
     header nav a {
