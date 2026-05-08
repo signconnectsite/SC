@@ -460,9 +460,8 @@ footer {
     top: 15% !important;
 }
 
-[vw-acces-button] img {
-    width: auto !important;
-    height: auto !important;
+[vw-acces-button] {
+    z-index: 99999 !important;
 }
 
 /* RESPONSIVIDADE para telas menores */
