@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SingConnect</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="../midia/icon.svg">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3">
+        <div>
+          <img src="../midia/logo.png" class="w-8 h-8 object-contain" alt="SingConnect">
+        </div>
+        <span class="text-xl font-extrabold">SingConnect</span>
+      </div>
+
+      <!-- NAV DESKTOP -->
+      <nav class="hidden md:flex items-center gap-2">
+        <button onclick="scrollToSection('sobre')" class="nav-btn">Sobre</button>
+        <button onclick="scrollToSection('solucion')" class="nav-btn">Solución</button>
+        <button onclick="scrollToSection('funcionamiento')" class="nav-btn">Funcionamiento</button>
+        <button onclick="scrollToSection('publico')" class="nav-btn">Público</button>
+        <button onclick="scrollToSection('contacto')" class="nav-btn contact-btn">Contacto</button>
+      </nav>
+
+      <!-- AÇÕES  EXTRAS: dark mode, idioma, hambúrguer -->
+      <div class="flex items-center gap-2">
+
+        <!-- MODO ESCURO -->
+        <button id="dark-toggle" onclick="toggleDark()" class="dark-toggle" title="Cambiar tema">
+          <i data-lucide="moon" class="w-5 h-5"></i>
+        </button>
+
+        <!-- IDIOMA -->
+        <div class="lang-dropdown">
+          <button class="lang-btn" onclick="toggleLangMenu()">
+            <span>🇪🇸</span>
+            <span>ES</span>
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </button>
+          <div id="lang-menu" class="lang-menu">
+            <a href="../index.html" class="lang-option">🇧🇷 Português</a>
+            <a href="ingles.html" class="lang-option">🇺🇸 English</a>
+            <a href="espanhol.html" class="lang-option active">🇪🇸 Español</a>
+          </div>
+        </div>
+
+        <!-- MENU HAMBÚRGUER (só aparece no mobile) -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" onclick="toggleMobileMenu()" title="Menú">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAV DRAWER (HAMBURGUER)-->
+  <div id="mobile-nav" class="mobile-nav-drawer">
+    <button onclick="scrollToSection('sobre')" class="mobile-nav-btn">Sobre</button>
+    <button onclick="scrollToSection('solucion')" class="mobile-nav-btn">Solución</button>
+    <button onclick="scrollToSection('funcionamiento')" class="mobile-nav-btn">Funcionamiento</button>
+    <button onclick="scrollToSection('publico')" class="mobile-nav-btn">Público</button>
+    <button onclick="scrollToSection('contacto')" class="mobile-nav-btn mobile-nav-contact-btn">Contacto</button>
+  </div>
+
+
+  <!-- HERO -->
+  <section class="relative pt-36 pb-24 overflow-hidden">
+    <div class="gradient-blob bg-indigo-400 w-96 h-96 top-10 -left-20"></div>
+    <div class="gradient-blob bg-purple-400 w-80 h-80 bottom-0 right-0"></div>
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+      <!-- Texto + botões + status -->
+      <div class="fade-in">
+        <span class="badge">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          Tecnología • Inclusión • Accesibilidad
+        </span>
+        <h1 class="hero-title">Conectando instituciones y intérpretes profesionales.</h1>
+        <p class="hero-description">
+          SingConnect es una plataforma creada para conectar instituciones
+          educativas e intérpretes de lengua de señas, facilitando la
+          contratación de servicios de accesibilidad.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <button onclick="scrollToSection('contacto')" class="primary-btn">Encontrar intérprete</button>
+          <button onclick="scrollToSection('solucion')" class="secondary-btn">Conocer la solución</button>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mt-10">
+          <div class="stats-card">
+            <h3 class="text-indigo-600">+200</h3>
+            <p>Intérpretes</p>
+          </div>
+          <div class="stats-card">
+            <h3 class="text-purple-600">+50</h3>
+            <p>Instituciones</p>
+          </div>
+          <div class="stats-card">
+            <h3 class="text-emerald-600">+500</h3>
+            <p>Conexiones</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ilustração SVG -->
+      <div class="fade-in fade-in-delay-1 relative">
+        <svg viewBox="0 0 400 400" class="w-full h-full">
+          <circle cx="200" cy="200" r="180" fill="#eef2ff" opacity="0.5" />
+          <circle cx="200" cy="200" r="150" fill="#e0e7ff" opacity="0.4" />
+          <circle cx="120" cy="150" r="30" fill="#4f46e5" />
+          <rect x="100" y="190" width="40" height="50" rx="6" fill="#4f46e5" />
+          <circle cx="80" cy="160" r="12" fill="#8b5cf6" />
+          <circle cx="160" cy="170" r="12" fill="#8b5cf6" />
+          <line x1="150" y1="200" x2="250" y2="200" stroke="#a78bfa" stroke-width="4" />
+          <rect x="260" y="140" width="60" height="70" rx="8" fill="#10b981" />
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+      <div>
+        <span class="section-badge">Sobre el proyecto</span>
+        <h2 class="section-title">Tecnología para la comunicación accesible.</h2>
+      </div>
+      <div class="space-y-5">
+        <p class="section-text">
+          SingConnect nació con el objetivo de apoyar a instituciones educativas
+          e intérpretes a través de una plataforma moderna de conexión y accesibilidad.
+        </p>
+        <p class="section-text">
+          La propuesta facilita la contratación de intérpretes, promoviendo
+          la inclusión social y ampliando oportunidades profesionales.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SOLUÇÃO -->
+  <section id="solucion" class="section bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="solution-grid">
+
+        <!-- Coluna esquerda: texto + cards -->
+        <div class="solution-left">
+          <span class="section-badge-dark">Solución</span>
+          <h2 class="section-title text-white">Conectando instituciones e intérpretes profesionales.</h2>
+          <p class="text-slate-400 mt-5">SingConnect propone una plataforma de conexión entre instituciones educativas e intérpretes profesionales, facilitando el proceso de contratación y ampliando la accesibilidad.</p>
+          <div class="solution-cards">
+            <div class="feature-card">
+              <i data-lucide="building-2" class="feature-icon text-indigo-400"></i>
+              <h3>Contratación para instituciones</h3>
+              <p>Escuelas, universidades y centros educativos pueden solicitar intérpretes de forma rápida y organizada.</p>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="user-check" class="feature-icon text-emerald-400"></i>
+              <h3>Registro de intérpretes</h3>
+              <p>Los intérpretes pueden crear perfiles, indicar disponibilidad y participar en oportunidades.</p>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="shield-check" class="feature-icon text-purple-400"></i>
+              <h3>Seguridad y confianza</h3>
+              <p>Verificación de perfiles y evaluaciones para garantizar calidad y seguridad en las conexiones.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna direita: imagem com legenda -->
+        <div class="solution-image-wrap">
+          <img src="../midia/sala_aula.png" alt="Aula inclusiva con intérprete de lengua de señas" class="solution-img" />
+          <div class="solution-image-caption">
+            <div class="solution-image-labels">
+              <span class="solution-label label-purple">Profesora</span>
+              <span class="solution-label label-purple">Intérprete Lengua de Señas</span>
+            </div>
+            <p class="solution-caption-text">
+              <span class="text-indigo-400 italic">Ambiente inclusivo con estudiantes comprometidos</span><br>
+              <span class="text-slate-400 text-sm">Comunicación accesible para todos</span>
+            </p>
+            <span class="solution-check">✓</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FUNCIONAMIENTO -->
+  <section id="funcionamiento" class="section">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <span class="section-badge">Funcionamiento</span>
+      <h2 class="section-title">¿Cómo funciona?</h2>
+      <div class="grid md:grid-cols-4 gap-8 mt-16">
+        <div class="step-card">
+          <div class="step-number bg-indigo-100 text-indigo-600">1</div>
+          <h3>Registro</h3>
+          <p>Instituciones e intérpretes crean su cuenta en la plataforma.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number bg-purple-100 text-purple-600">2</div>
+          <h3>Perfil</h3>
+          <p>El profesional indica su disponibilidad y experiencia.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number bg-emerald-100 text-emerald-600">3</div>
+          <h3>Conexión</h3>
+          <p>La plataforma conecta a profesionales e instituciones.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number bg-amber-100 text-amber-600">4</div>
+          <h3>Contratación</h3>
+          <p>El servicio se contrata de forma rápida y segura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PÚBLICO-ALVO -->
+  <section id="publico" class="section bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <span class="section-badge">Público objetivo</span>
+      <h2 class="section-title">¿Para quién es SingConnect?</h2>
+      <div class="grid md:grid-cols-2 gap-8 mt-16">
+        <div class="audience-card">
+          <i data-lucide="graduation-cap" class="audience-icon text-indigo-600"></i>
+          <h3>Instituciones Educativas</h3>
+          <p>Escuelas, universidades y centros educativos que necesitan intérpretes de lengua de señas.</p>
+        </div>
+        <div class="audience-card">
+          <i data-lucide="users" class="audience-icon text-emerald-600"></i>
+          <h3>Intérpretes Profesionales</h3>
+          <p>Intérpretes de lengua de señas que desean ampliar su actuación profesional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTATO -->
+  <section id="contacto" class="section contact-dark-section">
+    <div class="max-w-2xl mx-auto px-6">
+      <form id="contact-form" class="contact-form-dark">
+
+        <div class="contact-field">
+          <label class="contact-label-dark" for="name">Nombre</label>
+          <input class="contact-input-dark" type="text" id="name" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-label-dark" for="email">Correo electrónico</label>
+          <input class="contact-input-dark" type="email" id="email" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-label-dark">Eres:</label>
+          <label class="radio-option">
+            <input type="radio" name="role" value="institucion" required>
+            <span class="radio-custom"></span>
+            <span class="radio-label">Institución Educativa</span>
+            <i data-lucide="building-2" class="radio-icon text-indigo-400"></i>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="role" value="interprete">
+            <span class="radio-custom"></span>
+            <span class="radio-label">Intérprete Profesional</span>
+            <i data-lucide="user-check" class="radio-icon text-emerald-400"></i>
+          </label>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-label-dark" for="message">Mensaje</label>
+          <textarea class="contact-input-dark" id="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit-btn">Enviar mensaje</button>
+        <div id="form-success" class="success-message hidden">✓ ¡Mensaje enviado con éxito!</div>
+
+      </form>
+    </div>
+  </section>
+
+
+  <!-- FOOTER (RODAPÉ) -->
+  <footer class="bg-slate-900 py-10 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <div>
+          <img src="../midia/logo.png" class="w-8 h-8 object-contain" alt="SingConnect">
+        </div>
+        <span class="text-white text-xl font-bold">SingConnect</span>
+      </div>
+      <p class="text-slate-400">Conectando instituciones e intérpretes profesionales.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
